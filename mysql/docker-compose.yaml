@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+
+  db:
+    image: mysql:5.7
+   
+      
+networks:
+    wordpressNetwork:
+        driver: bridge
+        external: true

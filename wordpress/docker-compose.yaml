@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+
+  wordpress:
+    image: wordpress:latest
+   
+      
+networks:
+    wordpressNetwork:
+        name: wordpressNetwork
+        driver: bridge

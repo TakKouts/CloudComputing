@@ -1,0 +1,26 @@
+version: '3.4'
+
+services: 
+    phpmyadmin:
+        container_name: phpMyAdming
+        ports:
+         - '8888:80'
+        restart: always
+        environment:
+          PMA_HOST: db
+          PMA_USER: wordpress
+          PMA_PASSWORD: apostolos
+        deploy:
+          resources:
+            limits:
+              cpus: '0.10'
+              memory: 200M
+            reservations:
+              cpus: '0.05'
+              memory: 50M         
+ 
+        networks:
+          - wordpressNetwork
+volumes:
+    data:
+      driver: local
